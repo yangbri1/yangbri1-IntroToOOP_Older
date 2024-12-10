@@ -39,9 +39,12 @@ public class Bird {
      * A constructor for the bird class: this method allows us to build a new bird with the 'new' keyword.
      * No need to change anything here, for now.
      */
-    public Bird(int ageMonths){
+    public Bird(){
         // assign above 'ageMonths' field (point by 'this' keyword) w/ value from arg's 'ageMonth'
-        this.ageMonths = ageMonths;
+        // this.ageMonths = ageMonths;
+
+        // initialize 'ageMonths' field w/ default value of 0 in this default Constructor (no args)
+        ageMonths = 0;  // or omit since test cases does NOT seem to take default values into consideration
     }
     /**
      * @return "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is
@@ -50,11 +53,11 @@ public class Bird {
     public String sound(){
         // if 'Bird' is less than 3 months old
         if(ageMonths < 3){
-            // return "Chirp" String sound
-            return("Chirp");
+            // return "Tweet" String sound
+            return("Tweet");
         }
         // otherwise return "Tweet" String sound
-        return "Tweet";
+        return "Chirp";
     }
 
 }
